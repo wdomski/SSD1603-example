@@ -106,15 +106,19 @@ int main(void)
 		u8g_FirstPage(&u8g);
 		do {
 			u8g_SetFont(&u8g, u8g_font_profont12);
-			u8g_DrawStr(&u8g, 0, 12,  "    Hello there :)");
-			u8g_DrawStr(&u8g, 0, 26, "    Visit my blog");
-
-			u8g_SetFont(&u8g, u8g_font_courB10);
-			u8g_DrawStr(&u8g, 0, 55, "blog.domski.pl");
-
+			u8g_DrawStr(&u8g, 0, 22,  "    Hello there :)");
+			u8g_DrawStr(&u8g, 0, 36, "    Visit my blog");
 		} while (u8g_NextPage(&u8g));
 
-		HAL_Delay(100);
+		HAL_Delay(2000);
+
+		u8g_FirstPage(&u8g);
+		do {
+			u8g_SetFont(&u8g, u8g_font_courB10);
+			u8g_DrawStr(&u8g, 0, 35, "blog.domski.pl");
+		} while (u8g_NextPage(&u8g));
+
+		HAL_Delay(2000);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
